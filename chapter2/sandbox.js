@@ -45,3 +45,53 @@ people.forEach(person => {
     html+= `<li style="color:purple">${person}</li>`
 })
 ul.innerHTML = html;
+
+// this usage (arrow funtionlarda this keywordu çalışmıyor sadece regular functionlarda çalışıyor)
+let user = {
+    name: "sinan",
+    blogs: [
+        {title:"merhaba", like: 30},
+        {title:"javascript", like: 50}
+    ],
+    login: function(){
+        console.log("the user logged in")
+    },
+    logout: function() {
+        console.log("the user logged out")
+    },
+    logBlogs: function() {
+        console.log("this user has written the following blogs: ")
+        this.blogs.forEach(blog => console.log(blog.title, blog.like))
+    }
+}
+user.login();
+user.logout();
+user.logBlogs();
+
+// innerHTML and innerText
+const content = document.querySelector('.content');
+const employees = ['sinan','deniz','can'];
+employees.forEach(person => {
+    content.innerHTML += `<p>${person}</p>`;
+});
+// setAttribute
+const msg = document.querySelector('.success')
+msg.setAttribute('style','color:green')
+console.log(msg.style)
+msg.style.fontSize = '60px'
+msg.style.color = 'crimson'
+
+//Parents, Children & Siblings 
+const article = document.querySelector('article')
+Array.from(article.children).forEach(child => {
+    child.classList.add('article-element')
+})
+// Event Listener
+
+const items1 = document.querySelectorAll('li');
+
+items1.forEach(item => {
+    item.addEventListener('click', e => {
+        console.log(e.target)
+    })
+})
