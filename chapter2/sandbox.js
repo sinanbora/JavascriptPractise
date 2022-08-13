@@ -44,6 +44,7 @@ let html = ``;
 people.forEach(person => {
     html+= `<li style="color:purple">${person}</li>`
 })
+<<<<<<< Updated upstream
 ul.innerHTML = html;
 
 // this usage (arrow funtionlarda this keywordu çalışmıyor sadece regular functionlarda çalışıyor)
@@ -95,3 +96,6 @@ items1.forEach(item => {
         console.log(e.target)
     })
 })
+=======
+ul.innerHTML = html; ;;;
+>>>>>>> Stashed changes
