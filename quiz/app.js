@@ -1,6 +1,7 @@
 const correctAnswers = ['B','B','B','B']
 const form = document.querySelector('.quiz-form');
 const result = document.querySelector('.result');
+let correct = document.querySelector('.form-check-label');
 
 form.addEventListener('submit', e =>{
     e.preventDefault();
@@ -10,8 +11,7 @@ form.addEventListener('submit', e =>{
 
     userAnswers.forEach((answer,index) =>{
         if (answer === correctAnswers[index]) {
-            score += 100/((correctAnswers.length)) 
-            
+            score += 100/((correctAnswers.length))
         }
     })
 
@@ -29,3 +29,12 @@ form.addEventListener('submit', e =>{
         }
     },10)
 })
+
+const products = [
+    {user:'sinan',price:50},
+    {user:'deniz',price:10},
+    {user:'can',price:20},
+    {user:'canan',price:30},
+    {user:'ömer',price:70},
+]
+

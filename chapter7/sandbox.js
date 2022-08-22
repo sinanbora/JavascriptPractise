@@ -24,7 +24,7 @@ if (result) {
     console.log('Şifre geçerli')
 }
 else{
-    console.error('Şifre geçersiz')
+    console.log('Şifre geçersiz')
 }
 
 //live feedback
@@ -35,4 +35,11 @@ form.username.addEventListener('keyup', e => {
     } else {
         form.username.setAttribute('class','error')
     }
+})
+
+const info = document.querySelector('.info');
+const button = document.querySelector('.bigger');
+
+button.addEventListener('click', e =>{
+    info.setAttribute('class', 'text-xl')
 })
